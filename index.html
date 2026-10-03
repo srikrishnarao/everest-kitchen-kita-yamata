@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>エベレストキッチン Everest Kitchen | メニュー Menu</title>
+<meta name="description" content="アジアンダイニング エベレストキッチンのメニュー。Menu of Everest Kitchen, Asian dining.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%9B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#6e1423; --maroon-deep:#4a0c18; --saffron:#e9a21b; --ink:#2a1a1a;
+  --bg:#fbf8f3; --card:#ffffff; --muted:#6f5f5a; --line:#e6dccf;
+  --on-maroon:#fff4e0;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+
+.hero{position:relative;color:var(--on-maroon);background:var(--maroon-deep)}
+.hero img{width:100%;height:clamp(220px,52vw,420px);object-fit:cover;opacity:.55}
+.hero-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:20px clamp(16px,5vw,48px) 22px;background:linear-gradient(to top,rgba(40,6,14,.92),rgba(40,6,14,0) 70%)}
+.hero h1{margin:0;font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:800;font-size:clamp(30px,8vw,56px);line-height:1.1;letter-spacing:.02em}
+.hero p{margin:6px 0 0;font-size:clamp(14px,3.6vw,18px)}
+.info{max-width:760px;margin:0 auto;padding:18px 16px 6px;display:grid;gap:14px}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:15px}
+.hours dt{font-weight:700;color:var(--maroon)}
+.hours dd{margin:0}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--maroon);color:var(--on-maroon);font-weight:700;text-decoration:none;font-size:16px}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--maroon)}
+.note{margin:0;font-size:13px;color:var(--muted)}
+
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav ul{list-style:none;margin:0 auto;padding:8px 12px;display:flex;gap:8px;overflow-x:auto;max-width:980px;scrollbar-width:none}
+nav ul::-webkit-scrollbar{display:none}
+nav a{display:block;white-space:nowrap;text-decoration:none;padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;font-weight:500;background:var(--card)}
+nav a[aria-current="true"]{background:var(--maroon);color:var(--on-maroon);border-color:var(--maroon)}
+
+main{max-width:980px;margin:0 auto;padding:8px 14px 40px}
+section{padding-top:30px}
+section h2{margin:0 0 4px;font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:800;font-size:clamp(24px,6vw,34px);line-height:1.2;color:var(--maroon)}
+
+section h2 small{font-family:inherit;font-weight:500;font-size:.55em;color:var(--muted);margin-left:.5em}
+.sub{margin:0 0 14px;color:var(--muted);font-size:14px}
+.pages{display:grid;gap:18px;grid-template-columns:1fr}
+.page{margin:0}
+.page button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;position:relative}
+.page button:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.page img{width:100%;height:auto}
+.page figcaption{margin-top:6px;font-size:13px;color:var(--muted);text-align:center}
+.page .zoom{position:absolute;right:10px;bottom:10px;background:rgba(74,12,24,.88);color:#fff;font-size:13px;padding:5px 12px;border-radius:999px}
+@media (min-width:760px){
+  .pages.two{grid-template-columns:1fr 1fr}
+}
+.wide{grid-column:1/-1}
+
+.addr{font-style:normal;margin:0 0 14px;font-size:16px}
+.addr .en{color:var(--muted);font-size:14px}
+.foot-links{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.fine{margin:18px 0 0;font-size:11px;line-height:1.5;color:var(--muted)}
+footer{max-width:980px;margin:0 auto;padding:26px 16px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer strong{color:var(--ink)}
+
+#viewer{position:fixed;inset:0;z-index:20;background:rgba(20,6,8,.96);display:none;flex-direction:column}
+#viewer.open{display:flex}
+#viewer .bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;color:#fff;font-size:14px}
+#viewer button{all:unset;cursor:pointer;color:#fff;background:rgba(255,255,255,.16);padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;min-height:24px}
+#viewer button:focus-visible{outline:3px solid var(--saffron)}
+#stage{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 0 calc(16px + env(safe-area-inset-bottom,0px));text-align:center;overscroll-behavior:contain}
+#stage img{display:inline-block;width:100%;max-width:none;height:auto;background:#fff;cursor:zoom-in}
+#stage.zoomed img{width:220%;cursor:zoom-out}
+@media (min-width:900px){#stage img{width:min(100%,900px)} #stage.zoomed img{width:1800px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.btn{gap:.4em}
+.deliv{display:grid;gap:12px;grid-template-columns:1fr;align-items:start}
+@media (min-width:640px){.deliv{grid-template-columns:1fr 1fr}}
+.dcard{border-radius:14px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.dcard:hover{border-color:var(--saffron)}
+.dmain{display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:72px;text-decoration:none;color:var(--ink)}
+.dcode{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:10px 16px 14px;border-top:1.5px dashed var(--saffron)}
+.lg.rocket{background:#14235b;color:#fff;font-size:15px;letter-spacing:.02em}
+.lg.rocket b{color:#ffb020;font-weight:800;margin-left:4px}
+.dtxt{display:flex;flex-direction:column;line-height:1.35}
+.dtxt strong{font-size:16px}
+.dtxt small{color:var(--muted);font-size:12px}
+.logo{flex:none;width:60px;height:60px;border-radius:12px;object-fit:cover;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.lg{flex:none;display:inline-flex;align-items:center;justify-content:center;height:44px;min-width:104px;padding:0 14px;border-radius:10px;font-weight:800;font-size:18px;letter-spacing:-.01em;font-family:system-ui,-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif}
+.lg.uber{background:#000;color:#fff}
+.lg.uber b{color:#06c167;font-weight:800;margin-left:4px}
+.lg.demae{background:#e60012;color:#fff;letter-spacing:.02em}
+.codebox{margin-top:14px;padding:12px 14px;border:1.5px dashed var(--saffron);border-radius:12px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--card)}
+.codelabel{font-size:13px;color:var(--muted);flex:1 1 100%}
+.dcode code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:16px;word-break:break-all}
+.dcode button{all:unset;cursor:pointer;padding:9px 18px;border-radius:999px;background:var(--maroon);color:var(--on-maroon);font-weight:700;font-size:14px;min-height:20px}
+.dcode button:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+[data-l]{display:none}
+html[lang="ja"] [data-l="ja"],html[lang="en"] [data-l="en"],html[lang="zh"] [data-l="zh"]{display:inline}
+html[lang="ja"] p[data-l="ja"],html[lang="en"] p[data-l="en"],html[lang="zh"] p[data-l="zh"]{display:block}
+html[lang="zh"] body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Zen Kaku Gothic New",sans-serif}
+html[lang="zh"] .hero h1,html[lang="zh"] section h2{font-family:"Songti SC","Noto Serif SC","Shippori Mincho B1",serif}
+html[lang="en"] body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Zen Kaku Gothic New",sans-serif}
+.lang{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:3;display:flex;gap:4px;background:rgba(40,6,14,.72);padding:4px;border-radius:999px}
+.lang button{all:unset;cursor:pointer;color:#fff4e0;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700;min-height:20px}
+.lang button[aria-pressed="true"]{background:var(--saffron);color:#2a1a1a}
+.lang button:focus-visible{outline:3px solid #fff;outline-offset:1px}
+.langnote{margin:0;font-size:13px;color:var(--muted)}
+
+.vegnote{margin:0 0 16px;padding:12px 14px;border-left:4px solid var(--saffron);background:var(--card);border-radius:0 8px 8px 0;font-size:14px;color:var(--ink)}
+.vgroup{margin:0 0 18px}
+.vgroup h3{margin:0 0 6px;font-size:17px;color:var(--maroon)}
+.vgroup ul{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.vgroup li{display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:10px 14px;border-top:1px solid var(--line)}
+.vgroup li:first-child{border-top:0}
+.vgroup .nm{flex:1}
+.vgroup .nm small{display:block;color:var(--muted);font-size:12px}
+.vgroup .pr{white-space:nowrap;font-weight:700}
+.tag{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;border:1px solid var(--saffron);font-size:11px;font-weight:700;color:var(--ink);white-space:nowrap}
+
+
+:root{color-scheme:light;
+  --bg:#fff4e1; --card:#fffaf1; --ink:#3b2316; --muted:#7d6552; --line:#efd9b8;
+  --maroon:#9a2a1f; --maroon-deep:#6b1a12; --saffron:#f0a21c; --on-maroon:#fff6e4;}
+body{background:linear-gradient(180deg,#fff0d6 0,#fff4e1 340px,#fff4e1 100%) no-repeat,var(--bg)}
+.hero img{opacity:.78}
+.hero-text{background:linear-gradient(to top,rgba(107,26,18,.9),rgba(107,26,18,0) 72%)}
+.lang{background:rgba(107,26,18,.78)}
+nav{background:rgba(255,244,225,.96)}
+.page button{background:#fffdf8;box-shadow:0 2px 10px rgba(154,42,31,.10)}
+.vgroup ul{box-shadow:0 2px 10px rgba(154,42,31,.07)}
+
+body{background:linear-gradient(180deg,#fff0d6 0,#fff4e1 360px,#fff4e1 100%) no-repeat,url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 96 96%22%3E%3Cg fill=%22none%22 stroke=%22%239a2a1f%22 stroke-opacity=%22.10%22 stroke-width=%221%22%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(0 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(45 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(90 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(135 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(180 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(225 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(270 48 48)%22/%3E%3Cellipse cx=%2248%22 cy=%2238%22 rx=%224%22 ry=%2210%22 transform=%22rotate(315 48 48)%22/%3E%3Ccircle cx=%2248%22 cy=%2248%22 r=%223%22/%3E%3Ccircle cx=%2248%22 cy=%2248%22 r=%2222%22/%3E%3C/g%3E%3Cg fill=%22%239a2a1f%22 fill-opacity=%22.07%22%3E%3Ccircle cx=%220%22 cy=%220%22 r=%222%22/%3E%3Ccircle cx=%2296%22 cy=%220%22 r=%222%22/%3E%3Ccircle cx=%220%22 cy=%2296%22 r=%222%22/%3E%3Ccircle cx=%2296%22 cy=%2296%22 r=%222%22/%3E%3C/g%3E%3C/svg%3E"),var(--bg)}
+header,.info,main,footer{position:relative;z-index:1}
+.hero{overflow:hidden}
+.hero img{height:clamp(260px,56vw,460px)}
+.hero-text{padding-bottom:calc(max(100vw,760px)*.1167 + 8px)}
+.hero .namaste{font-family:"Noto Sans Devanagari","Hiragino Sans",sans-serif;font-size:clamp(16px,4vw,20px);color:var(--saffron);margin:2px 0 0;font-weight:600}
+.ridge{position:absolute;bottom:-1px;left:50%;width:max(100%,760px);height:auto;transform:translateX(-50%);pointer-events:none;z-index:2}
+.sun{animation:rise 2.8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(48px);opacity:0}to{transform:none;opacity:1}}
+section h2::after{content:"";display:block;width:132px;height:12px;margin:8px 0 12px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22132%22 height=%2212%22 viewBox=%220 0 132 12%22%3E%3Cg stroke=%22%239a2a1f%22 stroke-opacity=%22.55%22 fill=%22none%22%3E%3Cpath d=%22M0 6H50M82 6H132%22/%3E%3Cpath d=%22M66 1l6 5-6 5-6-5z%22 fill=%22%23f0a21c%22 stroke=%22none%22/%3E%3C/g%3E%3Ccircle cx=%2255%22 cy=%226%22 r=%221.6%22 fill=%22%239a2a1f%22 fill-opacity=%22.55%22/%3E%3Ccircle cx=%2277%22 cy=%226%22 r=%221.6%22 fill=%22%239a2a1f%22 fill-opacity=%22.55%22/%3E%3C/svg%3E") no-repeat left center}
+footer{border-top:0;padding-top:46px}
+footer::before{content:"";position:absolute;left:0;right:0;top:8px;height:20px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2236%22 height=%2220%22 viewBox=%220 0 36 20%22%3E%3Cpath d=%22M3 20V11Q18 -6 33 11V20%22 fill=%22none%22 stroke=%22%239a2a1f%22 stroke-opacity=%22.5%22 stroke-width=%221.4%22/%3E%3Ccircle cx=%2218%22 cy=%229%22 r=%221.8%22 fill=%22%23f0a21c%22/%3E%3C/svg%3E") repeat-x bottom}
+.bgdeco{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.mandala{position:absolute;right:-190px;bottom:-190px;width:580px;height:580px;color:#9a2a1f;opacity:.085;animation:spin 240s linear infinite}
+.eyes{position:absolute;left:50%;top:32%;width:min(94vw,680px);height:auto;transform:translateX(-50%);color:#9a2a1f;opacity:.07;animation:eyesIn 4s ease both}
+@keyframes eyesIn{from{opacity:0}to{opacity:.07}}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 12s ease-in-out infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95.5%{transform:scaleY(.06)}}
+.iris{animation:gaze 18s ease-in-out infinite}
+@keyframes gaze{0%,100%{transform:translateX(0)}30%{transform:translateX(-7px)}65%{transform:translateX(7px)}}
+.stupa{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;opacity:.11;filter:sepia(.6) saturate(.85);-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 55%,transparent 100%);animation:stupaIn 4s ease both,stupaDrift 90s ease-in-out infinite alternate}
+@keyframes stupaIn{from{opacity:0}to{opacity:.11}}
+@keyframes stupaDrift{from{transform:scale(1)}to{transform:scale(1.07)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sun,.mandala,.stupa{animation:none}}
+</style>
+
+<meta name="theme-color" content="#6e1423">
+<meta property="og:type" content="website">
+<meta property="og:title" content="エベレストキッチン Everest Kitchen | メニュー Menu">
+<meta property="og:description" content="アジアンダイニング エベレストキッチンのメニュー・デリバリー・アクセス">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"エベレストキッチン (Everest Kitchen)","telephone":"+81-45-534-6167","servesCuisine":["Indian","Nepalese","Asian"],"address":{"@type":"PostalAddress","streetAddress":"北山田1-12-4 コーニス1F","addressLocality":"横浜市都筑区","addressRegion":"神奈川県","postalCode":"224-0021","addressCountry":"JP"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bgdeco" aria-hidden="true"><img class="stupa" src="img/stupa.webp" alt="" width="900" height="900"><svg class="mandala" viewBox="-100 -100 200 200" fill="none" stroke="currentColor" stroke-width=".8" aria-hidden="true"><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(0.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(22.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(45.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(67.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(90.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(112.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(135.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(157.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(180.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(202.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(225.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(247.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(270.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(292.5)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(315.0)"/><ellipse cx="0" cy="-79" rx="6" ry="14" transform="rotate(337.5)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(45)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(90)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(135)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(180)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(225)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(270)"/><ellipse cx="0" cy="-58" rx="9" ry="20" transform="rotate(315)"/><circle cx="0.0" cy="-92.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="17.9" cy="-90.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="35.2" cy="-85.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="51.1" cy="-76.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="65.1" cy="-65.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="76.5" cy="-51.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="85.0" cy="-35.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="90.2" cy="-17.9" r="1.6" fill="currentColor" stroke="none"/><circle cx="92.0" cy="-0.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="90.2" cy="17.9" r="1.6" fill="currentColor" stroke="none"/><circle cx="85.0" cy="35.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="76.5" cy="51.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="65.1" cy="65.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="51.1" cy="76.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="35.2" cy="85.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="17.9" cy="90.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="0.0" cy="92.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="-17.9" cy="90.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="-35.2" cy="85.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="-51.1" cy="76.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="-65.1" cy="65.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="-76.5" cy="51.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="-85.0" cy="35.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="-90.2" cy="17.9" r="1.6" fill="currentColor" stroke="none"/><circle cx="-92.0" cy="0.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="-90.2" cy="-17.9" r="1.6" fill="currentColor" stroke="none"/><circle cx="-85.0" cy="-35.2" r="1.6" fill="currentColor" stroke="none"/><circle cx="-76.5" cy="-51.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="-65.1" cy="-65.1" r="1.6" fill="currentColor" stroke="none"/><circle cx="-51.1" cy="-76.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="-35.2" cy="-85.0" r="1.6" fill="currentColor" stroke="none"/><circle cx="-17.9" cy="-90.2" r="1.6" fill="currentColor" stroke="none"/><circle r="96"/><circle r="66"/><circle r="44"/><circle r="26"/><circle r="10"/></svg></div>
+
+<header class="hero">
+  <img src="img/storefront.webp" alt="エベレストキッチン Everest Kitchen" width="1000" height="750">
+  <div class="lang" role="group" aria-label="Language 言語 语言">
+    <button type="button" data-set="ja" aria-pressed="true">日本語</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+    <button type="button" data-set="zh" aria-pressed="false">中文</button>
+  </div>
+  <div class="hero-text">
+    <h1>エベレストキッチン</h1>
+    <p>EVEREST KITCHEN &nbsp;<span data-l="ja">アジアンダイニング</span><span data-l="en">Asian dining</span><span data-l="zh">亚洲餐厅</span></p>
+    <p class="namaste" lang="ne">नमस्ते</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 1200 140" aria-hidden="true">
+  <circle class="sun" cx="440" cy="74" r="30" fill="#f8c04a"/>
+  <path d="M0 140V90L90 60 170 85 260 40 340 78 430 52 520 92 610 18 690 70 760 48 850 88 940 44 1030 82 1110 58 1200 86V140Z" fill="#f1d3ae"/>
+  <g fill="#fffaf0"><path d="M232 58L260 40 288 60 272 56 260 64 246 57Z"/><path d="M572 50L610 18 650 52 630 46 610 58 592 47Z"/><path d="M915 60L940 44 968 62 952 57 940 66 928 58Z"/></g>
+  <path d="M0 140V108L120 88 240 112 380 84 520 114 660 92 800 116 940 90 1080 112 1200 96V140Z" fill="#dba983"/>
+  <path d="M0 140V124C200 104 380 132 600 118 820 104 1000 130 1200 116V140Z" style="fill:var(--bg)"/>
+</svg>
+</header>
+
+<div class="info">
+  <dl class="hours">
+    <dt><span data-l="ja">ランチ</span><span data-l="en">Lunch</span><span data-l="zh">午餐</span></dt><dd>11:00–15:00</dd>
+    <dt><span data-l="ja">ディナー</span><span data-l="en">Dinner</span><span data-l="zh">晚餐</span></dt><dd>17:00–23:00</dd>
+    <dt><span data-l="ja">お持ち帰り</span><span data-l="en">Take out</span><span data-l="zh">外带</span></dt><dd><span data-l="ja">OK</span><span data-l="en">OK</span><span data-l="zh">可以</span></dd>
+  </dl>
+  <div class="actions">
+    <a class="btn" href="tel:0455346167"><span data-l="ja">電話する</span><span data-l="en">Call</span><span data-l="zh">拨打电话</span> 045-534-6167</a>
+    <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A8%E3%83%99%E3%83%AC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E5%8C%97%E5%B1%B1%E7%94%B01-12-4" target="_blank" rel="noopener"><span data-l="ja">Googleマップ</span><span data-l="en">Google Maps</span><span data-l="zh">谷歌地图</span></a>
+    <a class="btn alt" href="#lunch"><span data-l="ja">メニューを見る</span><span data-l="en">View menu</span><span data-l="zh">查看菜单</span></a>
+    <a class="btn alt" href="#delivery"><span data-l="ja">デリバリー</span><span data-l="en">Delivery</span><span data-l="zh">外送</span></a>
+  </div>
+  <p class="langnote" data-l="en">The menu photos are in Japanese, with some English. Tap a photo to zoom in.</p>
+  <p class="langnote" data-l="zh">菜单图片为日文（部分含英文）。点击图片可放大。</p>
+</div>
+
+<nav aria-label="Menu sections">
+  <ul id="tabs">
+    <li><a href="#lunch"><span data-l="ja">ランチ</span><span data-l="en">Lunch</span><span data-l="zh">午餐</span></a></li>
+    <li><a href="#dinner"><span data-l="ja">ディナーセット</span><span data-l="en">Dinner sets</span><span data-l="zh">晚餐套餐</span></a></li>
+    <li><a href="#curry"><span data-l="ja">カレー</span><span data-l="en">Curry</span><span data-l="zh">咖喱</span></a></li>
+    <li><a href="#veg"><span data-l="ja">ベジ・ヴィーガン</span><span data-l="en">Vegetarian & vegan</span><span data-l="zh">素食·纯素</span></a></li>
+    <li><a href="#nan"><span data-l="ja">ナン・デザート</span><span data-l="en">Nan & dessert</span><span data-l="zh">馕与甜点</span></a></li>
+    <li><a href="#tandoor"><span data-l="ja">タンドール</span><span data-l="en">Tandoor</span><span data-l="zh">烤炉料理</span></a></li>
+    <li><a href="#snack"><span data-l="ja">スナック</span><span data-l="en">Snacks</span><span data-l="zh">小吃</span></a></li>
+    <li><a href="#salad"><span data-l="ja">サラダ・アジア</span><span data-l="en">Salad & Asian</span><span data-l="zh">沙拉·亚洲料理</span></a></li>
+    <li><a href="#side"><span data-l="ja">サイド</span><span data-l="en">Side menu</span><span data-l="zh">小菜</span></a></li>
+    <li><a href="#takeout"><span data-l="ja">テイクアウト</span><span data-l="en">Take out</span><span data-l="zh">外带</span></a></li>
+    <li><a href="#delivery"><span data-l="ja">デリバリー</span><span data-l="en">Delivery</span><span data-l="zh">外送</span></a></li>
+    <li><a href="#drinks"><span data-l="ja">ドリンク</span><span data-l="en">Drinks</span><span data-l="zh">饮品</span></a></li>
+    <li><a href="#party"><span data-l="ja">パーティー</span><span data-l="en">Party</span><span data-l="zh">聚会宴会</span></a></li>
+    <li><a href="#gallery"><span data-l="ja">店内</span><span data-l="en">Inside</span><span data-l="zh">店内环境</span></a></li>
+    <li><a href="#access"><span data-l="ja">アクセス</span><span data-l="en">Access</span><span data-l="zh">交通</span></a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="lunch">
+    <h2><span data-l="ja">ランチ 11:00–15:00</span><span data-l="en">Lunch 11:00–15:00</span><span data-l="zh">午餐 11:00–15:00</span></h2>
+    <p class="sub"><span data-l="ja">ナン・ライスお替わり自由</span><span data-l="en">Free refills of nan or rice</span><span data-l="zh">馕或米饭可免费续添</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/lunch.webp" data-title="ランチメニュー|Lunch menu|午餐菜单"><img loading="lazy" src="img/lunch.webp" alt="ランチメニュー Lunch menu" width="1500" height="1065"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="dinner">
+    <h2><span data-l="ja">ディナーセット</span><span data-l="en">Dinner sets</span><span data-l="zh">晚餐套餐</span></h2>
+    <p class="sub"><span data-l="ja">辛さは0〜4から選べます</span><span data-l="en">Choose your spice level, from 0 (mild) to 4 (very hot)</span><span data-l="zh">辣度可选，从0（不辣）到4（特辣）</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/dinner-set.webp" data-title="ディナーセット|Dinner sets|晚餐套餐"><img loading="lazy" src="img/dinner-set.webp" alt="ディナーセット Dinner sets" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="curry">
+    <h2><span data-l="ja">カレー</span><span data-l="en">Curry</span><span data-l="zh">咖喱</span></h2>
+    <p class="sub"><span data-l="ja">チキン・ポーク・マトン・野菜・シーフード</span><span data-l="en">Chicken, pork, mutton, vegetable, seafood</span><span data-l="zh">鸡肉、猪肉、羊肉、蔬菜、海鲜</span></p>
+    <div class="pages two">
+      <figure class="page"><button type="button" data-full="img/curry-chicken-pork.webp" data-title="チキン・ポークカレー|Chicken & pork curry|鸡肉与猪肉咖喱"><img loading="lazy" src="img/curry-chicken-pork.webp" alt="チキンカレー ポークカレー Chicken pork curry" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">チキン・ポーク</span><span data-l="en">Chicken & pork</span><span data-l="zh">鸡肉·猪肉</span></figcaption></figure>
+      <figure class="page"><button type="button" data-full="img/curry-mutton-rice.webp" data-title="マトンカレー・ライス|Mutton curry & rice|羊肉咖喱与米饭"><img loading="lazy" src="img/curry-mutton-rice.webp" alt="マトンカレー ライス Mutton curry rice" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">マトン・ライス</span><span data-l="en">Mutton & rice</span><span data-l="zh">羊肉·米饭</span></figcaption></figure>
+      <figure class="page"><button type="button" data-full="img/curry-veg-seafood.webp" data-title="野菜・シーフードカレー|Vegetable & seafood curry|蔬菜与海鲜咖喱"><img loading="lazy" src="img/curry-veg-seafood.webp" alt="野菜カレー シーフードカレー Vegetable seafood curry" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">野菜・シーフード</span><span data-l="en">Vegetable & seafood</span><span data-l="zh">蔬菜·海鲜</span></figcaption></figure>
+    </div>
+  </section>
+  <section id="veg">
+    <h2><span data-l="ja">ベジタリアン・ヴィーガン対応</span><span data-l="en">Vegetarian & vegan friendly</span><span data-l="zh">素食·纯素友好</span></h2>
+    <p class="vegnote"><span data-l="ja">メニューの説明から、肉・魚を使っていないと思われる料理です。ギー、バター、クリーム、だしを使う場合があり、ナンの生地には乳・卵が入ることがあります。ヴィーガン対応については、ご注文の際に必ずスタッフにご確認ください。</span><span data-l="en">These dishes look meat-free and fish-free from the menu descriptions. Recipes may use ghee, butter, cream or stock, and nan dough can contain milk or egg, so none of them are guaranteed vegan. Please tell the staff when you order and ask which dishes can be made vegan.</span><span data-l="zh">根据菜单说明，以下菜品看起来不含肉类和鱼类。菜品可能使用酥油、黄油、奶油或高汤，馕的面团也可能含牛奶或鸡蛋，因此不能保证纯素。点餐时请告知店员，并询问哪些菜品可以做成纯素。</span></p>
+    <div class="vgroup"><h3><span data-l="ja">カレー</span><span data-l="en">Curry</span><span data-l="zh">咖喱</span></h3><ul><li><span class="nm"><span data-l="ja">ミックスベジタブルカレー</span><span data-l="en">Mix Vegetable Curry</span><span data-l="zh">什锦蔬菜咖喱</span><small><span data-l="en">ミックスベジタブルカレー</span><span data-l="zh">ミックスベジタブルカレー</span></small></span><span class="pr">¥900</span></li><li><span class="nm"><span data-l="ja">ダル（豆）カレー</span><span data-l="en">Dal (Lentil) Curry</span><span data-l="zh">扁豆咖喱</span><small><span data-l="en">ダル（豆）カレー</span><span data-l="zh">ダル（豆）カレー</span></small></span><span class="pr">¥880</span></li><li><span class="nm"><span data-l="ja">サグマッシュルーム</span><span data-l="en">Sag Mushroom</span><span data-l="zh">菠菜蘑菇咖喱</span><small><span data-l="en">サグマッシュルーム</span><span data-l="zh">サグマッシュルーム</span></small></span><span class="pr">¥880</span></li><li><span class="nm"><span data-l="ja">アルベイガン</span><span data-l="en">Aloo Baigan (potato & eggplant)</span><span data-l="zh">土豆茄子咖喱</span><small><span data-l="en">アルベイガン</span><span data-l="zh">アルベイガン</span></small></span><span class="pr">¥950</span></li><li><span class="nm"><span data-l="ja">サグパニール</span><span data-l="en">Sag Paneer (spinach & homemade cheese)</span><span data-l="zh">菠菜奶酪咖喱</span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">サグパニール</span><span data-l="zh">サグパニール</span></small></span><span class="pr">¥900</span></li><li><span class="nm"><span data-l="ja">サグチーズカレー</span><span data-l="en">Sag Cheese Curry</span><span data-l="zh">菠菜芝士咖喱</span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">サグチーズカレー</span><span data-l="zh">サグチーズカレー</span></small></span><span class="pr">¥900</span></li><li><span class="nm"><span data-l="ja">タイグリーンカレー</span><span data-l="en">Thai Green Curry</span><span data-l="zh">泰式绿咖喱</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">タイグリーンカレー</span><span data-l="zh">タイグリーンカレー</span></small></span><span class="pr">¥950</span></li></ul></div>
+    <div class="vgroup"><h3><span data-l="ja">スナック</span><span data-l="en">Snacks</span><span data-l="zh">小吃</span></h3><ul><li><span class="nm"><span data-l="ja">野菜パコダ</span><span data-l="en">Vegetable Pakoda</span><span data-l="zh">蔬菜炸饼</span><small><span data-l="en">野菜パコダ</span><span data-l="zh">野菜パコダ</span></small></span><span class="pr">¥630</span></li><li><span class="nm"><span data-l="ja">茄子パコダ</span><span data-l="en">Nasu (Eggplant) Pakoda</span><span data-l="zh">茄子炸饼</span><small><span data-l="en">茄子パコダ</span><span data-l="zh">茄子パコダ</span></small></span><span class="pr">¥550</span></li><li><span class="nm"><span data-l="ja">インド風野菜天ぷら</span><span data-l="en">Indian Style Vegetable Tempura</span><span data-l="zh">印度风蔬菜天妇罗</span><small><span data-l="en">インド風野菜天ぷら</span><span data-l="zh">インド風野菜天ぷら</span></small></span><span class="pr">¥550〜</span></li><li><span class="nm"><span data-l="ja">ポテトフライ</span><span data-l="en">Potato Fry</span><span data-l="zh">炸薯角</span><small><span data-l="en">ポテトフライ</span><span data-l="zh">ポテトフライ</span></small></span><span class="pr">¥480</span></li><li><span class="nm"><span data-l="ja">ポテトチリ</span><span data-l="en">Potato Chili</span><span data-l="zh">辣炒土豆</span><small><span data-l="en">ポテトチリ</span><span data-l="zh">ポテトチリ</span></small></span><span class="pr">¥580</span></li><li><span class="nm"><span data-l="ja">小松菜炒め</span><span data-l="en">Komatsuna Stir-fry</span><span data-l="zh">炒小松菜</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">小松菜炒め</span><span data-l="zh">小松菜炒め</span></small></span><span class="pr">¥400</span></li><li><span class="nm"><span data-l="ja">スパイシードリトス</span><span data-l="en">Spicy Doritos</span><span data-l="zh">香辣多力多滋</span><small><span data-l="en">スパイシードリトス</span><span data-l="zh">スパイシードリトス</span></small></span><span class="pr">¥550</span></li><li><span class="nm"><span data-l="ja">チーズオムレツ</span><span data-l="en">Cheese Omelet</span><span data-l="zh">芝士蛋卷</span><span class="tag"><span data-l="ja">卵</span><span data-l="en">Egg</span><span data-l="zh">含蛋</span></span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">チーズオムレツ</span><span data-l="zh">チーズオムレツ</span></small></span><span class="pr">¥400</span></li></ul></div>
+    <div class="vgroup"><h3><span data-l="ja">サラダ・スープ</span><span data-l="en">Salads & soup</span><span data-l="zh">沙拉·汤</span></h3><ul><li><span class="nm"><span data-l="ja">グリーンサラダ</span><span data-l="en">Green Salad</span><span data-l="zh">绿色沙拉</span><small><span data-l="en">グリーンサラダ</span><span data-l="zh">グリーンサラダ</span></small></span><span class="pr">¥580</span></li><li><span class="nm"><span data-l="ja">アボカドサラダ</span><span data-l="en">Avocado Salad</span><span data-l="zh">牛油果沙拉</span><span class="tag"><span data-l="ja">卵</span><span data-l="en">Egg</span><span data-l="zh">含蛋</span></span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">アボカドサラダ</span><span data-l="zh">アボカドサラダ</span></small></span><span class="pr">¥680</span></li><li><span class="nm"><span data-l="ja">トマトサラダ</span><span data-l="en">Tomato Salad</span><span data-l="zh">番茄沙拉</span><span class="tag"><span data-l="ja">卵</span><span data-l="en">Egg</span><span data-l="zh">含蛋</span></span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">トマトサラダ</span><span data-l="zh">トマトサラダ</span></small></span><span class="pr">¥580</span></li><li><span class="nm"><span data-l="ja">ベジタブルスープ</span><span data-l="en">Vegetable Soup</span><span data-l="zh">蔬菜汤</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">ベジタブルスープ</span><span data-l="zh">ベジタブルスープ</span></small></span><span class="pr">¥400</span></li></ul></div>
+    <div class="vgroup"><h3><span data-l="ja">おつまみ・サイド</span><span data-l="en">Starters & side dishes</span><span data-l="zh">小食·小菜</span></h3><ul><li><span class="nm"><span data-l="ja">枝豆</span><span data-l="en">Edamame</span><span data-l="zh">毛豆</span><small><span data-l="en">枝豆</span><span data-l="zh">枝豆</span></small></span><span class="pr">¥300</span></li><li><span class="nm"><span data-l="ja">サモサ（じゃがいも・グリーンピース）</span><span data-l="en">Samosa (potato & green peas)</span><span data-l="zh">咖喱角（土豆青豆）</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">サモサ（じゃがいも・グリーンピース）</span><span data-l="zh">サモサ（じゃがいも・グリーンピース）</span></small></span><span class="pr">¥550</span></li><li><span class="nm"><span data-l="ja">マサラナッツ</span><span data-l="en">Masala Nuts</span><span data-l="zh">马萨拉坚果</span><small><span data-l="en">マサラナッツ</span><span data-l="zh">マサラナッツ</span></small></span><span class="pr">¥480</span></li><li><span class="nm"><span data-l="ja">バターコーン</span><span data-l="en">Butter Corn</span><span data-l="zh">黄油玉米</span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">バターコーン</span><span data-l="zh">バターコーン</span></small></span><span class="pr">¥420</span></li><li><span class="nm"><span data-l="ja">アルジーラ</span><span data-l="en">Aloo Jeera (cumin potato)</span><span data-l="zh">孜然土豆</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">アルジーラ</span><span data-l="zh">アルジーラ</span></small></span><span class="pr"></span></li><li><span class="nm"><span data-l="ja">豆腐アボカドサラダ（サイドメニュー）</span><span data-l="en">Tofu Avocado Salad (side menu)</span><span data-l="zh">豆腐牛油果沙拉（小菜）</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">豆腐アボカドサラダ（サイドメニュー）</span><span data-l="zh">豆腐アボカドサラダ（サイドメニュー）</span></small></span><span class="pr">¥420</span></li><li><span class="nm"><span data-l="ja">マサラパパド（サイドメニュー）</span><span data-l="en">Masala Papad (side menu)</span><span data-l="zh">马萨拉脆饼（小菜）</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">マサラパパド（サイドメニュー）</span><span data-l="zh">マサラパパド（サイドメニュー）</span></small></span><span class="pr">¥420</span></li><li><span class="nm"><span data-l="ja">アルパコダ（サイドメニュー）</span><span data-l="en">Aloo Pakoda (side menu)</span><span data-l="zh">土豆炸饼（小菜）</span><small><span data-l="en">アルパコダ（サイドメニュー）</span><span data-l="zh">アルパコダ（サイドメニュー）</span></small></span><span class="pr">¥420</span></li><li><span class="nm"><span data-l="ja">マサラオムレツ（サイドメニュー）</span><span data-l="en">Masala Omelet (side menu)</span><span data-l="zh">马萨拉蛋饼（小菜）</span><span class="tag"><span data-l="ja">卵</span><span data-l="en">Egg</span><span data-l="zh">含蛋</span></span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">マサラオムレツ（サイドメニュー）</span><span data-l="zh">マサラオムレツ（サイドメニュー）</span></small></span><span class="pr">¥420</span></li></ul></div>
+    <div class="vgroup"><h3><span data-l="ja">ライス・ナン</span><span data-l="en">Rice & nan</span><span data-l="zh">米饭与馕</span></h3><ul><li><span class="nm"><span data-l="ja">プレーンライス</span><span data-l="en">Plain Rice</span><span data-l="zh">白米饭</span><small><span data-l="en">プレーンライス</span><span data-l="zh">プレーンライス</span></small></span><span class="pr">¥350</span></li><li><span class="nm"><span data-l="ja">ターメリック／ガーリック／クミンライス</span><span data-l="en">Turmeric / Garlic / Cumin Rice</span><span data-l="zh">姜黄／蒜香／孜然饭</span><small><span data-l="en">ターメリック／ガーリック／クミンライス</span><span data-l="zh">ターメリック／ガーリック／クミンライス</span></small></span><span class="pr">¥480</span></li><li><span class="nm"><span data-l="ja">野菜ビリヤニ</span><span data-l="en">Vegetable Biriyani</span><span data-l="zh">蔬菜印度炒饭</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">野菜ビリヤニ</span><span data-l="zh">野菜ビリヤニ</span></small></span><span class="pr">¥1,250</span></li><li><span class="nm"><span data-l="ja">プレーンナン</span><span data-l="en">Plain Nan</span><span data-l="zh">原味馕</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">プレーンナン</span><span data-l="zh">プレーンナン</span></small></span><span class="pr">¥300</span></li><li><span class="nm"><span data-l="ja">ガーリックナン</span><span data-l="en">Garlic Nan</span><span data-l="zh">蒜香馕</span><span class="tag"><span data-l="ja">要確認</span><span data-l="en">Ask staff</span><span data-l="zh">请询问店员</span></span><small><span data-l="en">ガーリックナン</span><span data-l="zh">ガーリックナン</span></small></span><span class="pr">¥450</span></li></ul></div>
+    <div class="vgroup"><h3><span data-l="ja">デザート</span><span data-l="en">Dessert</span><span data-l="zh">甜点</span></h3><ul><li><span class="nm"><span data-l="ja">スイトライタ</span><span data-l="en">Sweet Raita (yogurt & mango)</span><span data-l="zh">甜酸奶芒果</span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">スイトライタ</span><span data-l="zh">スイトライタ</span></small></span><span class="pr">¥300</span></li><li><span class="nm"><span data-l="ja">バニラアイス</span><span data-l="en">Vanilla Ice Cream</span><span data-l="zh">香草冰淇淋</span><span class="tag"><span data-l="ja">乳製品</span><span data-l="en">Dairy</span><span data-l="zh">含乳制品</span></span><small><span data-l="en">バニラアイス</span><span data-l="zh">バニラアイス</span></small></span><span class="pr">¥300</span></li></ul></div>
+    <p class="sub"><span data-l="ja">価格は印刷メニューによります。最新の価格は店内メニューをご確認ください。</span><span data-l="en">Prices are from the printed menu. Check the in-store menu for the latest prices.</span><span data-l="zh">价格依据印刷菜单，最新价格请查看店内菜单。</span></p>
+  </section>
+  <section id="nan">
+    <h2><span data-l="ja">ナン・デザート</span><span data-l="en">Nan & dessert</span><span data-l="zh">馕与甜点</span></h2>
+    <p class="sub"><span data-l="ja">備長炭で焼く焼きたてナン</span><span data-l="en">Nan baked fresh over charcoal</span><span data-l="zh">备长炭现烤印度馕</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/nan-dessert.webp" data-title="ナン・デザート|Nan & dessert|馕与甜点"><img loading="lazy" src="img/nan-dessert.webp" alt="ナン デザート Nan dessert" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="tandoor">
+    <h2><span data-l="ja">タンドール</span><span data-l="en">Tandoor</span><span data-l="zh">烤炉料理</span></h2>
+    <p class="sub"><span data-l="ja">窯で焼くタンドール料理とスナック</span><span data-l="en">Clay-oven tandoori dishes and snacks</span><span data-l="zh">烤炉烤制的坦都里料理与小吃</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/tandoor.webp" data-title="タンドール・スナック|Tandoor & snacks|烤炉料理与小吃"><img loading="lazy" src="img/tandoor.webp" alt="タンドール スナック Tandoor snacks" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="snack">
+    <h2><span data-l="ja">スナック</span><span data-l="en">Snacks</span><span data-l="zh">小吃</span></h2>
+    <div class="pages two">
+      <figure class="page"><button type="button" data-full="img/snack-1.webp" data-title="スナック 1|Snacks 1|小吃 1"><img loading="lazy" src="img/snack-1.webp" alt="スナックメニュー1 Snacks 1" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+      <figure class="page"><button type="button" data-full="img/snack-2.webp" data-title="スナック 2|Snacks 2|小吃 2"><img loading="lazy" src="img/snack-2.webp" alt="スナックメニュー2 Snacks 2" width="1500" height="2122"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="salad">
+    <h2><span data-l="ja">サラダ・スープ・アジア料理</span><span data-l="en">Salad, soup & Asian dishes</span><span data-l="zh">沙拉·汤·亚洲料理</span></h2>
+    <p class="sub"><span data-l="ja">フォー、パッタイ、ガパオ、ナシゴレンなど</span><span data-l="en">Including pho, pad thai, gapao and nasi goreng</span><span data-l="zh">包括河粉、泰式炒河粉、打抛饭、印尼炒饭等</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/salad-soup-asian.webp" data-title="サラダ・スープ・アジア料理|Salad, soup & Asian dishes|沙拉·汤·亚洲料理"><img loading="lazy" src="img/salad-soup-asian.webp" alt="サラダ スープ アジア料理 Salad soup Asian items" width="1500" height="2092"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="side">
+    <h2><span data-l="ja">サイドメニュー</span><span data-l="en">Side menu</span><span data-l="zh">小菜菜单</span></h2>
+    <p class="sub"><span data-l="ja">11:00〜23:00。ドリンクもお料理も全品420円（税込）</span><span data-l="en">11:00–23:00. Every drink and every dish is ¥420, tax included</span><span data-l="zh">11:00–23:00。所有饮品和菜品均为420日元（含税）</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/side.webp" data-title="サイドメニュー|Side menu|小菜菜单"><img loading="lazy" src="img/side.webp" alt="サイドメニュー Side menu" width="1022" height="1460"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="takeout">
+    <h2><span data-l="ja">テイクアウト</span><span data-l="en">Take out</span><span data-l="zh">外带</span></h2>
+    <p class="sub"><span data-l="ja">ランチ 11:00–15:00 / ディナー 17:00–23:00。グランドメニューもお持ち帰りできます。</span><span data-l="en">Lunch 11:00–15:00 / Dinner 17:00–23:00. Dishes from the main menu can also be taken out.</span><span data-l="zh">午餐 11:00–15:00 / 晚餐 17:00–23:00。主菜单上的菜品也可外带。</span></p>
+    <div class="pages two">
+      <figure class="page"><button type="button" data-full="img/takeout-lunch.webp" data-title="ランチ テイクアウト|Lunch take out|午餐外带"><img loading="lazy" src="img/takeout-lunch.webp" alt="ランチテイクアウト Lunch take out" width="1500" height="2125"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">ランチ</span><span data-l="en">Lunch</span><span data-l="zh">午餐</span></figcaption></figure>
+      <figure class="page"><button type="button" data-full="img/takeout-dinner.webp" data-title="ディナー テイクアウト|Dinner take out|晚餐外带"><img loading="lazy" src="img/takeout-dinner.webp" alt="ディナーテイクアウト Dinner take out" width="1500" height="2125"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">ディナー</span><span data-l="en">Dinner</span><span data-l="zh">晚餐</span></figcaption></figure>
+    </div>
+  </section>
+  <section id="delivery">
+    <h2><span data-l="ja">デリバリー</span><span data-l="en">Delivery</span><span data-l="zh">外送</span></h2>
+    <p class="sub"><span data-l="ja">エベレストキッチンのお料理をご自宅やオフィスへ</span><span data-l="en">Get Everest Kitchen delivered to your home or office</span><span data-l="zh">把珠峰厨房的美味送到家里或办公室</span></p>
+    <div class="deliv">
+      <div class="dcard">
+        <a class="dmain" href="https://www.ubereats.com/store-browse-uuid/4a9b9056-4ad6-5b30-8eef-badca5a3ed81?diningMode=DELIVERY" target="_blank" rel="noopener">
+          <img class="logo" src="img/logo-uber.webp" alt="" width="60" height="60">
+          <span class="dtxt"><strong><span data-l="ja">Uber Eatsで注文</span><span data-l="en">Order on Uber Eats</span><span data-l="zh">在 Uber Eats 订餐</span></strong><small><span data-l="ja">デリバリー</span><span data-l="en">Delivery option</span><span data-l="zh">外送</span></small></span>
+        </a>
+        <div class="dcode">
+          <span class="codelabel"><span data-l="ja">初回注文の割引コード</span><span data-l="en">First-order discount code</span><span data-l="zh">首单优惠码</span></span>
+          <code id="ubercode">eats-gautamb63gue</code>
+          <button type="button" id="copycode" data-copy="eats-gautamb63gue"><span data-l="ja">コピー</span><span data-l="en">Copy</span><span data-l="zh">复制</span></button>
+        </div>
+      </div>
+      <div class="dcard">
+        <a class="dmain" href="https://demae-can.com/shop/menu/3418751/" target="_blank" rel="noopener">
+          <img class="logo" src="img/logo-demae.webp" alt="" width="60" height="60">
+          <span class="dtxt"><strong><span data-l="ja">出前館で注文</span><span data-l="en">Order on Demae-can</span><span data-l="zh">在出前館订餐</span></strong><small><span data-l="ja">デリバリー</span><span data-l="en">Delivery option</span><span data-l="zh">外送</span></small></span>
+        </a>
+      </div>
+      <div class="dcard">
+        <a class="dmain" href="https://customer-web.rocketnow.co.jp/share?storeId=50176&dishId&key=1ce8572a-0162-4122-8c9f-8f916162b55f" target="_blank" rel="noopener">
+          <img class="logo" src="img/logo-rocket.webp" alt="" width="60" height="60">
+          <span class="dtxt"><strong><span data-l="ja">ロケットナウで注文</span><span data-l="en">Order on Rocket Now</span><span data-l="zh">在 Rocket Now 订餐</span></strong><small><span data-l="ja">デリバリー</span><span data-l="en">Delivery option</span><span data-l="zh">外送</span></small></span>
+        </a>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:12px"><span data-l="ja">価格・配達エリア・手数料は各サービスの表示をご確認ください。割引の条件はUber Eatsに従います。</span><span data-l="en">Prices, delivery area and fees are shown by each delivery service. The discount follows Uber Eats terms.</span><span data-l="zh">价格、配送范围和费用以各外送平台显示为准。优惠以 Uber Eats 的条款为准。</span></p>
+  </section>
+  <section id="drinks">
+    <h2><span data-l="ja">ドリンク</span><span data-l="en">Drinks</span><span data-l="zh">饮品</span></h2>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/drinks.webp" data-title="ドリンクメニュー|Drink menu|饮品菜单"><img loading="lazy" src="img/drinks.webp" alt="ドリンクメニュー Drink menu" width="1481" height="1055"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+      <figure class="page"><button type="button" data-full="img/nomihoudai.webp" data-title="飲み放題|All you can drink|畅饮套餐"><img loading="lazy" src="img/nomihoudai.webp" alt="飲み放題 Nomihoudai" width="1076" height="1522"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">飲み放題（2時間）</span><span data-l="en">All you can drink (2 hours)</span><span data-l="zh">畅饮（2小时）</span></figcaption></figure>
+    </div>
+  </section>
+  <section id="party">
+    <h2><span data-l="ja">パーティーメニュー</span><span data-l="en">Party menu</span><span data-l="zh">聚会宴会菜单</span></h2>
+    <p class="sub"><span data-l="ja">2名様から46名様まで</span><span data-l="en">For 2 to 46 guests</span><span data-l="zh">2至46位均可</span></p>
+    <div class="pages">
+      <figure class="page"><button type="button" data-full="img/party.webp" data-title="パーティーメニュー|Party menu|聚会宴会菜单"><img loading="lazy" src="img/party.webp" alt="パーティーメニュー Party menu" width="1076" height="1522"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button></figure>
+    </div>
+  </section>
+  <section id="gallery">
+    <h2><span data-l="ja">店内の様子</span><span data-l="en">Inside the restaurant</span><span data-l="zh">店内环境</span></h2>
+    <div class="pages two">
+      <figure class="page"><button type="button" data-full="img/int-hall.webp" data-title="客席|Dining area|用餐区"><img loading="lazy" src="img/int-hall.webp" alt="店内の客席 Dining area" width="1300" height="975"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">客席</span><span data-l="en">Dining area</span><span data-l="zh">用餐区</span></figcaption></figure>
+      <figure class="page"><button type="button" data-full="img/int-front.webp" data-title="店内|Seating by the windows|窗边座位"><img loading="lazy" src="img/int-front.webp" alt="店内 Seating by the windows" width="1300" height="975"><span class="zoom"><span data-l="ja">拡大</span><span data-l="en">Zoom</span><span data-l="zh">放大</span></span></button><figcaption><span data-l="ja">窓際の席</span><span data-l="en">Seating by the windows</span><span data-l="zh">窗边座位</span></figcaption></figure>
+    </div>
+  </section>
+  <section id="access">
+    <h2><span data-l="ja">アクセス</span><span data-l="en">Access</span><span data-l="zh">交通</span></h2>
+    <address class="addr">
+      <span data-l="ja">〒224-0021 神奈川県横浜市都筑区北山田1-12-4 コーニス1F<br>横浜市営地下鉄グリーンライン 北山田駅から徒歩1分</span>
+      <span data-l="en">1-12-4 Kitayamata, Tsuzuki-ku, Yokohama, Kanagawa 224-0021 (Cornice 1F)<br>1 minute on foot from Kitayamata Station (Yokohama Municipal Subway Green Line)</span>
+      <span data-l="zh">神奈川县横滨市都筑区北山田1-12-4 Cornice 1楼（邮编 224-0021）<br>横滨市营地铁绿线 北山田站 步行1分钟</span>
+    </address>
+    <div class="actions">
+      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=%E3%82%A8%E3%83%99%E3%83%AC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E5%8C%97%E5%B1%B1%E7%94%B01-12-4" target="_blank" rel="noopener"><span data-l="ja">経路を見る</span><span data-l="en">Directions</span><span data-l="zh">查看路线</span></a>
+      <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A8%E3%83%99%E3%83%AC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E5%8C%97%E5%B1%B1%E7%94%B01-12-4" target="_blank" rel="noopener"><span data-l="ja">Googleマップ</span><span data-l="en">Google Maps</span><span data-l="zh">谷歌地图</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>エベレストキッチン Everest Kitchen</strong><br>
+  TEL <a href="tel:0455346167">045-534-6167</a>
+  <p class="foot-links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A8%E3%83%99%E3%83%AC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E5%8C%97%E5%B1%B1%E7%94%B01-12-4" target="_blank" rel="noopener"><span data-l="ja">口コミを書く</span><span data-l="en">Write a review</span><span data-l="zh">写评价</span></a> <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A8%E3%83%99%E3%83%AC%E3%82%B9%E3%83%88%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%20%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E5%8C%97%E5%B1%B1%E7%94%B01-12-4" target="_blank" rel="noopener"><span data-l="ja">Googleマップ</span><span data-l="en">Google Maps</span><span data-l="zh">谷歌地图</span></a></p>
+  <p class="fine"><span data-l="ja">写真はすべてイメージです。価格・内容は変更になる場合があります。</span><span data-l="en">Photos are for illustration. Prices and items may change.</span><span data-l="zh">图片仅供参考，价格及内容可能有所变动。</span></p>
+</footer>
+
+<div id="viewer" role="dialog" aria-modal="true" aria-label="Menu viewer">
+  <div class="bar"><span id="vtitle"></span><button type="button" id="vclose"><span data-l="ja">閉じる</span><span data-l="en">Close</span><span data-l="zh">关闭</span></button></div>
+  <div id="stage"><img id="vimg" alt=""></div>
+</div>
+
+<script>
+(function(){
+  var TITLES={ja:'エベレストキッチン | メニュー',en:'Everest Kitchen | Menu',zh:'エベレストキッチン Everest Kitchen | 菜单'};
+  var LANGS=['ja','en','zh'];
+  var lang='ja';
+  function detect(){
+    try{var p=new URLSearchParams(location.search).get('lang');if(LANGS.indexOf(p)>-1)return p;}catch(e){}
+    try{var s=localStorage.getItem('ek-lang');if(LANGS.indexOf(s)>-1)return s;}catch(e){}
+    return 'ja';
+  }
+  var viewer=document.getElementById('viewer'),stage=document.getElementById('stage'),vimg=document.getElementById('vimg'),vtitle=document.getElementById('vtitle'),vclose=document.getElementById('vclose'),last=null;
+  function titleOf(btn){var p=(btn.dataset.title||'').split('|');return p[LANGS.indexOf(lang)]||p[0]||'';}
+  function setLang(l){
+    lang=l;document.documentElement.lang=l;document.title=TITLES[l];
+    [].forEach.call(document.querySelectorAll('.lang button'),function(b){b.setAttribute('aria-pressed',b.dataset.set===l?'true':'false')});
+    document.querySelector('nav').setAttribute('aria-label',{ja:'メニューカテゴリー',en:'Menu sections',zh:'菜单分类'}[l]);
+    if(viewer.classList.contains('open')&&last)vtitle.textContent=titleOf(last);
+    try{localStorage.setItem('ek-lang',l)}catch(e){}
+  }
+  [].forEach.call(document.querySelectorAll('.lang button'),function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
+  setLang(detect());
+  function open(btn){last=btn;vimg.src=btn.dataset.full;vimg.alt=titleOf(btn);vtitle.textContent=titleOf(btn);stage.classList.remove('zoomed');stage.scrollTop=0;stage.scrollLeft=0;viewer.classList.add('open');document.body.style.overflow='hidden';vclose.focus();}
+  function close(){viewer.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
+  document.querySelectorAll('.page button').forEach(function(b){b.addEventListener('click',function(){open(b)})});
+  vclose.addEventListener('click',close);
+  vimg.addEventListener('click',function(){stage.classList.toggle('zoomed')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&viewer.classList.contains('open'))close()});
+  var links=[].slice.call(document.querySelectorAll('#tabs a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current')});var a=map[e.target.id];if(a){a.setAttribute('aria-current','true');var u=a.parentNode.parentNode;u.scrollLeft=a.offsetLeft-(u.clientWidth-a.offsetWidth)/2}}})},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+  }
+  var cb=document.getElementById('copycode');
+  if(cb){cb.addEventListener('click',function(){
+    var t=cb.dataset.copy,done=function(){var o=cb.innerHTML;cb.textContent={ja:'コピーしました',en:'Copied',zh:'已复制'}[lang];setTimeout(function(){cb.innerHTML=o},1800)};
+    var fb=function(){try{var r=document.createRange();r.selectNodeContents(document.getElementById('ubercode'));var s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy');s.removeAllRanges();done()}catch(e){}};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fb)}else{fb()}
+  })}
+})();
+</script>
+</body>
+</html>
